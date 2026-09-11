@@ -4,6 +4,8 @@ On DoltgreSQL 1.3.1, `information_schema.columns` answers NULL in `generation_ex
 generated column `b int GENERATED ALWAYS AS (a + 1) STORED`, although the column computes its values and
 `is_generated` answers `ALWAYS`. PostgreSQL 18.6 answers the expression, `(a + 1)`.
 
+Reported upstream: https://github.com/dolthub/doltgresql/issues/3328
+
 ## Reproduce it
 
 You need Docker and a POSIX shell: Linux, macOS, or Windows with WSL. The first run downloads the images.
